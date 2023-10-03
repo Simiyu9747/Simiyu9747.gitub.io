@@ -13,6 +13,11 @@
             background-attachment: fixed;
             background-size: cover;
         }
+        @media screen and (max-width: 570px;){
+            .convert{
+                width: 100vw;
+            }
+        }
         header{
             background-color: grey;
             box-sizing: border-box;
@@ -88,7 +93,7 @@
     </header>
     <h1>Conversion of Units</h1>
     <div class="math">
-        <div>
+        <div class="convert">
             <h3>Changing <span>Metres</span> to <span>Kilometres</span></h3>
             <button onclick="document.getElementById('tokilometres').innerHTML = tokilometres();">Convert</button>
             <button class="clear" onclick="document.getElementById('tokilometres').style.display = 'none'">Clear</button>
@@ -96,7 +101,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
 
-        <div>
+        <div class="convert">
             <h3>Changing <span>Kilometres</span> to <span>Metres</span></h3>
             <button onclick="document.getElementById('tometres').innerHTML = tometres();">Convert</button>
             <button class="clear" onclick="document.getElementById('tometres').style.display = 'none'">Clear</button>
@@ -104,7 +109,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
         
-        <div>
+        <div class="convert">
             <h3>Changing <span>Centimetres</span> to <span>Metres</span></h3>
             <button onclick="document.getElementById('tometres2').innerHTML = tometres2();">Convert</button>
             <button class="clear" onclick="document.getElementById('tometres2').style.display = 'none'">Clear</button>
@@ -112,7 +117,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
 
-        <div>
+        <div class="convert">
             <h3>Changing <span>Metres</span> to <span>Centimetres</span></h3>
             <button onclick="document.getElementById('tocentimetres').innerHTML = tocentimetres();">Convert</button>
             <button class="clear" onclick="document.getElementById('tocentimetres').style.display = 'none'">Clear</button>
@@ -120,7 +125,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
 
-        <div>
+        <div class="convert">
             <h3>Changing <span>Kilometres</span> to <span>Centimetres</span></h3>
             <button onclick="document.getElementById('toCentimetres').innerHTML = toCentimetres();">Convert</button>
             <button class="clear" onclick="document.getElementById('toCentimetres').style.display = 'none'">Clear</button>
@@ -128,7 +133,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
 
-        <div>
+        <div class="convert">
             <h3>Changing <span>Centietres</span> to <span>Kilometres</span></h3>
             <button onclick="document.getElementById('toKilometres').innerHTML = toKilometres();">Convert</button>
             <button class="clear" onclick="document.getElementById('toKilometres').style.display = 'none'">Clear</button>
@@ -136,7 +141,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
 
-        <div>
+        <div class="convert">
             <h3>Changing <span>Minutes</span> to <span>Seconds</span></h3>
             <button onclick="document.getElementById('toseconds').innerHTML = toseconds();">Convert</button>
             <button class="clear" onclick="document.getElementById('toseconds').style.display = 'none'">Clear</button>
@@ -144,7 +149,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
 
-        <div>
+        <div class="convert">
             <h3>Changing <span>Seconds</span> to <span>Minutes</span></h3>
             <button onclick="document.getElementById('tominutes').innerHTML = tominutes();">Convert</button>
             <button class="clear" onclick="document.getElementById('tominutes').style.display = 'none'">Clear</button>
@@ -152,7 +157,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
 
-        <div>
+        <div class="convert">
             <h3>Changing <span>Seconds</span> to <span>Hours</span></h3>
             <button onclick="document.getElementById('toHours').innerHTML = toHours();">Convert</button>
             <button class="clear" onclick="document.getElementById('toHours').style.display = 'none'">Clear</button>
@@ -160,7 +165,7 @@
         </div>
         <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
 
-        <div>
+        <div class="convert">
             <h3>Changing <span>Hours</span> to <span>Seconds</span></h3>
             <button onclick="document.getElementById('toSeconds').innerHTML = toSeconds();">Convert</button>
             <button class="clear" onclick="document.getElementById('toSeconds').style.display = 'none'">Clear</button>
