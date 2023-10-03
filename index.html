@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kilometres, metres, centimetres, minutes, hours, seconds, conversion">
+    <title>Conversion of units</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            background: radial-gradient(rgb(21, 21, 59), grey);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        header{
+            background-color: grey;
+            box-sizing: border-box;
+            height: 30px;
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 0;
+        }
+        header a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        header a:hover{
+            color: aqua;
+        }
+        .math{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .math div{
+            height: 150px;
+            width: 600px;
+            background-color: aqua;
+            border-radius: 20px;
+            padding-top: 0;
+            border: solid 2px blue;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            text-shadow: 6px 6px 5px yellow;
+            text-decoration: underline solid red 3px;
+        }
+        .math div h3{
+            text-align: center;
+            font-size: 25px;
+            padding-top: 0;
+        }
+        p{
+            text-align: center;
+            color: goldenrod;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        button{
+            margin-left: 150px;
+            background-color: green;
+            color: white;
+        }
+        span{
+            color: blue;
+        }
+        .clear{
+            background-color: red;
+            color: white;
+        }
+        .final{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="">Formulae</a>
+        <a href="">More units...</a>
+    </header>
+    <h1>Conversion of Units</h1>
+    <div class="math">
+        <div>
+            <h3>Changing <span>Metres</span> to <span>Kilometres</span></h3>
+            <button onclick="document.getElementById('tokilometres').innerHTML = tokilometres();">Convert</button>
+            <button class="clear" onclick="document.getElementById('tokilometres').style.display = 'none'">Clear</button>
+            <p id="tokilometres"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+        <div>
+            <h3>Changing <span>Kilometres</span> to <span>Metres</span></h3>
+            <button onclick="document.getElementById('tometres').innerHTML = tometres();">Convert</button>
+            <button class="clear" onclick="document.getElementById('tometres').style.display = 'none'">Clear</button>
+            <p id="tometres"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+        
+        <div>
+            <h3>Changing <span>Centimetres</span> to <span>Metres</span></h3>
+            <button onclick="document.getElementById('tometres2').innerHTML = tometres2();">Convert</button>
+            <button class="clear" onclick="document.getElementById('tometres2').style.display = 'none'">Clear</button>
+            <p id="tometres2"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+        <div>
+            <h3>Changing <span>Metres</span> to <span>Centimetres</span></h3>
+            <button onclick="document.getElementById('tocentimetres').innerHTML = tocentimetres();">Convert</button>
+            <button class="clear" onclick="document.getElementById('tocentimetres').style.display = 'none'">Clear</button>
+            <p id="tocentimetres"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+        <div>
+            <h3>Changing <span>Kilometres</span> to <span>Centimetres</span></h3>
+            <button onclick="document.getElementById('toCentimetres').innerHTML = toCentimetres();">Convert</button>
+            <button class="clear" onclick="document.getElementById('toCentimetres').style.display = 'none'">Clear</button>
+            <p id="toCentimetres"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+        <div>
+            <h3>Changing <span>Centietres</span> to <span>Kilometres</span></h3>
+            <button onclick="document.getElementById('toKilometres').innerHTML = toKilometres();">Convert</button>
+            <button class="clear" onclick="document.getElementById('toKilometres').style.display = 'none'">Clear</button>
+            <p id="toKilometres"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+        <div>
+            <h3>Changing <span>Minutes</span> to <span>Seconds</span></h3>
+            <button onclick="document.getElementById('toseconds').innerHTML = toseconds();">Convert</button>
+            <button class="clear" onclick="document.getElementById('toseconds').style.display = 'none'">Clear</button>
+            <p id="toseconds"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+        <div>
+            <h3>Changing <span>Seconds</span> to <span>Minutes</span></h3>
+            <button onclick="document.getElementById('tominutes').innerHTML = tominutes();">Convert</button>
+            <button class="clear" onclick="document.getElementById('tominutes').style.display = 'none'">Clear</button>
+            <p id="tominutes"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+        <div>
+            <h3>Changing <span>Seconds</span> to <span>Hours</span></h3>
+            <button onclick="document.getElementById('toHours').innerHTML = toHours();">Convert</button>
+            <button class="clear" onclick="document.getElementById('toHours').style.display = 'none'">Clear</button>
+            <p id="toHours"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+        <div>
+            <h3>Changing <span>Hours</span> to <span>Seconds</span></h3>
+            <button onclick="document.getElementById('toSeconds').innerHTML = toSeconds();">Convert</button>
+            <button class="clear" onclick="document.getElementById('toSeconds').style.display = 'none'">Clear</button>
+            <p id="toSeconds"></p>
+        </div>
+        <p class="final"><strong>Reload page to do a different Conversion after you've cleared previous answer</strong></p>
+
+    </div>
+
+    <script>
+        //metres to kilometres
+        function tokilometres(){
+            var metres= window.prompt("How many metres do you want to change to kilometres??");
+            var kilometres = metres * 0.001;
+            var result = metres +" " + 'metre(s) is equals to' + " " + kilometres + " " + 'kilometre(s)'; 
+            return result;
+        }
+        //kilometres to metres
+        function tometres(){
+            var kilometres= window.prompt("How many kilometres do you want to change to metres??");
+            var metres = kilometres * 1000;
+            var result = kilometres +" " + 'kilometre(s) is equals to' + " " + metres + " " + 'metre(s)'; 
+            return result;
+        }
+        //centimetres to metres
+        function tometres2(){
+            var centimetres= window.prompt("How many centimetres do you want to change to metres??");
+            var metres = centimetres * 0.01;
+            var result = centimetres +" " + 'centimetre(s) is equals to' + " " + metres + " " + 'metre(s)'; 
+            return result;
+        }
+        //metres to centimetres
+        function tocentimetres(){
+            var metres= window.prompt("How many metres do you want to change to centimetres??");
+            var centimetres = metres * 100;
+            var result = metres +" " + 'metre(s) is equals to' + " " + centimetres + " " + 'centimetre(s)'; 
+            return result;
+        }
+        //kilometres to centimetres
+        function toCentimetres(){
+            var kilometres= window.prompt("How many kilometres do you want to change to centimetres??");
+            var centimetres = kilometres * 100000;
+            var result = kilometres +" " + 'kilometre(s) is equals to' + " " + centimetres + " " + 'centimetre(s)'; 
+            return result;
+        }
+        //centimetres to kilometres
+        function toKilometres(){
+            var centimetres= window.prompt("How many centimetres do you want to change to kilometres??");
+            var kilometres = centimetres * 0.00001;
+            var result = centimetres +" " + 'centimetre(s) is equals to' + " " + kilometres + " " + 'kilometre(s)'; 
+            return result;
+        }
+        //minutes to seconds
+        function toseconds(){
+            var minutes= window.prompt("How many minutes do you want to change to seconds??");
+            var seconds = minutes *60;
+            var result = minutes +" " + 'minute(s) is equals to' + " " + seconds + " " + 'second(s)'; 
+            return result;
+        }
+        //seconds to minutes
+        function tominutes(){
+            var seconds= window.prompt("How many seconds do you want to change to minutes??");
+            var minutes =seconds / 60;
+            var result = seconds +" " + 'second(s) is equals to' + " " + minutes + " " + 'minute(s)'; 
+            return result;
+        }
+        //seconds to hours
+        function toHours(){
+            var seconds= window.prompt("How many seconds do you want to change to hours??");
+            var hours =seconds / 3600;
+            var result = seconds +" " + 'second(s) is equals to' + " " + hours + " " + 'hour(s)'; 
+            return result;
+        }
+        //hours to seconds
+        function toSeconds(){
+            var hours= window.prompt("How many hours do you want to change to seconds??");
+            var seconds = hours *3600;
+            var result = hours +" " + 'hour(s) is equals to' + " " + seconds + " " + 'second(s)'; 
+            return result;
+        }
+    </script>
+</body>
+</html>
